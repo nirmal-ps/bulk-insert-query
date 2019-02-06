@@ -1,13 +1,12 @@
+import * as sqlString from 'sqlstring';
+
 export const GetBulkInsertQuery = (tableName: string, columns: string[], values: any[]) => {
   const validColumns = Array.isArray(columns) && columns.length ? columns : Object.keys(values);
   const validValueObject = values.map((value: any) => {
     let queryString = `(`;
     for (let i = 0; i < validColumns.length; ++i) {
-      if (typeof value[validColumns[i]] === 'number') {
-        queryString = `${queryString}${value[validColumns[i]]}${i !== validColumns.length - 1 ? ',' : ''}`;
-      } else if (typeof value[validColumns[i]] === 'string') {
-        queryString = `${queryString}'${value[validColumns[i]]}'${i !== validColumns.length - 1 ? ',' : ''}`;
-      }
+      const formatedValue = sqlString.escape(value[validColumns[i]]);
+      queryString = `${queryString}${formatedValue}${i !== validColumns.length - 1 ? ',' : ''}`;
     }
     return `${queryString})`;
   });

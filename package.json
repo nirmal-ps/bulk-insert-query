@@ -1,16 +1,16 @@
 {
   "name": "bulk-insert-query",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This module is used to generate native Bulk INSERT Queries.",
-   "main": "lib/index.js",
-   "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "prepublishOnly" : "npm test && npm run lint",
-    "prepare" : "npm run build",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags",
+    "prepublishOnly": "npm test && npm run lint",
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
@@ -19,8 +19,14 @@
     "type": "git",
     "url": "git+https://github.com/nirmal-ps/bulk-insert-query.git"
   },
-  "keywords": ["bulk insert", "bulk insert query" , "multiple insert" , "insert query" , "query builder"],
-   "author": "nirmaloasis",
+  "keywords": [
+    "bulk insert",
+    "bulk insert query",
+    "multiple insert",
+    "insert query",
+    "query builder"
+  ],
+  "author": "nirmaloasis",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nirmal-ps/bulk-insert-query/issues"
@@ -37,5 +43,9 @@
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.1"
+  },
+  "dependencies": {
+    "@types/sqlstring": "^2.2.1",
+    "sqlstring": "^2.3.1"
   }
 }
