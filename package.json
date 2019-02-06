@@ -1,0 +1,20 @@
+{
+  "name": "bulk-insert-query",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirmal-ps/bulk-insert-query.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nirmal-ps/bulk-insert-query/issues"
+  },
+  "homepage": "https://github.com/nirmal-ps/bulk-insert-query#readme"
+}

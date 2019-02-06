@@ -1,1 +1,1 @@
-# bulk-nsert-query
+# bulk-insert-query
