@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/nirmal-ps/bulk-insert-query.git"
   },
-  "keywords": ["bulk insert", "bulk insert query"],
+  "keywords": ["bulk insert", "bulk insert query" , "multiple insert" , "insert query" , "query builder"],
    "author": "nirmaloasis",
   "license": "ISC",
   "bugs": {
