@@ -1,20 +1,41 @@
 {
   "name": "bulk-insert-query",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This module is used by ORM to build bulk insert SQL queries in the different supported dialects.",
+   "main": "lib/index.js",
+   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jestconfig.json",
+    "prepublishOnly" : "npm test && npm run lint",
+    "prepare" : "npm run build",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nirmal-ps/bulk-insert-query.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["bulk insert", "bulk insert query"],
+   "author": "nirmaloasis",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nirmal-ps/bulk-insert-query/issues"
   },
-  "homepage": "https://github.com/nirmal-ps/bulk-insert-query#readme"
+  "homepage": "https://github.com/nirmal-ps/bulk-insert-query#readme",
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.0",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.1"
+  }
 }
