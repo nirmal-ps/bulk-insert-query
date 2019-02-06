@@ -1,6 +1,6 @@
 {
   "name": "bulk-insert-query",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This module is used by ORM to build bulk insert SQL queries in the different supported dialects.",
    "main": "lib/index.js",
    "types": "lib/index.d.ts",
