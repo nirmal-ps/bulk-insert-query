@@ -10,7 +10,7 @@
   </a>
   <br/>
 </div>
-This package is used to generate native bulk insert SQL queries in the different supported dialects.
+This package can be used to generate INSERT SQL queries.
 
 ## Dialects
 
